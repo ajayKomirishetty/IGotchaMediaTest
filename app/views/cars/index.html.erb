@@ -21,10 +21,12 @@
         <td><%= car.model %></td>
         <td><%= car.doors %></td>
         <td><%= car.owner_email %></td>
-        <td>TODO</td>
+         <td><%= car.repairs.count %></td>
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Add Repair', add_repair_path(car) %></td>
+        <td><%= link_to 'Show Repairs', show_repairs_path(car) %></td>
       </tr>
     <% end %>
   </tbody>

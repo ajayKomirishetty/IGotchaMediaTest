@@ -5,6 +5,7 @@ class Car < ApplicationRecord
     validates :model, :doors, :presence =>  { :message => " cannot be blank" }
     validates_format_of :owner_email, with: URI::MailTo::EMAIL_REGEXP
     validate :validate_doors
+    has_many :repairs
 
     def validate_doors
         unless car.doors == 2 || car.doors == 4

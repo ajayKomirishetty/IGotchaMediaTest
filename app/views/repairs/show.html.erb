@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Car Id:</strong>
+  <%= @repair.car_id %>
+</p>
+
+<p>
+  <strong>Repair Date:</strong>
+  <%= @repair.repair_date %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_repair_path(@repair) %> |
+<%= link_to 'Back', repairs_path %>

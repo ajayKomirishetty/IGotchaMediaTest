@@ -14,6 +14,9 @@ gem 'deep_pluck'
 
 gem 'graphql'
 
+# gem 'mimemagic'  github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f' 
+
+# gem "paperclip", "~> 6.0.0"
 
 gem 'pry'
 gem 'composite_primary_keys', '~> 13.0'

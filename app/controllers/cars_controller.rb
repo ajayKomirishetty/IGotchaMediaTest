@@ -1,5 +1,5 @@
 class CarsController < ApplicationController
-    before_action :set_car, only: [:show, :edit, :update, :destroy]
+    before_action :set_car, only: [:show, :edit, :update, :destroy, :add_repair,:show_repairs]
     # before_action :validate_number_of_doors, only: [:create]
 
   
@@ -9,14 +9,6 @@ class CarsController < ApplicationController
       @cars = Car.all
     end
 
-    # def validate_number_of_doors
-    #     # byebug
-    #     car = Car.new(car_params)
-    #     unless car.doors == 2 || car.doors == 4
-    #         car.errors.add( "doors must be 2 or 4" )
-    #         return 1
-    #     end
-    # end
   
     # GET /cars/1
     # GET /cars/1.json
@@ -30,6 +22,14 @@ class CarsController < ApplicationController
   
     # GET /cars/1/edit
     def edit
+    end
+
+    def add_repair
+      @repair = Repair.new(:car_id => @car.id)
+    end
+
+    def show_repairs
+      @repairs = @car.repairs
     end
   
     # POST /cars
