@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<% if @car.photo? %>
+<%= image_tag @car.photo_url %>
+<%= link_to @car.photo_url, @car.photo_url %>
+
+<% end %>
 <p>
   <strong>Brand:</strong>
   <%= @car.brand_id %>
